@@ -1,0 +1,34 @@
+body{
+    background-color: white;
+    /*    background-image: url(" ")  ; */
+
+}
+    
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    grid-template-rows: 100px;
+    grid-template-areas:
+    'header header header header header'
+    'about  Experience Experience Experience  Social_Acticity'
+    'Skills  Experience Experience Experience  Social_Acticity'
+    ;
+
+    }
+    .item1{grid-area: header; grid-row: 1 / span 2 ; background-color: lightblue; text-align: left; font-weight: bold; font-size: 150%;
+}
+    .item2{grid-area: about;
+            grid-row: 3 / span 7 }
+    .item3{grid-area: Experience;
+           grid-row: 3 / span 20 }
+    .item4{grid-area: Social_Acticity;
+            grid-row: 3 / span 16 }
+    .item5{grid-area: Skills;
+            grid-row: 10 / span 10 }
+
+    div>div{
+        background-color: rgb(255, 255, 255, 0.5);
+    }
