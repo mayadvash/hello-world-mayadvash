@@ -1,0 +1,56 @@
+<!DOCKTYPE HTML>
+<html>
+    <HEAD>
+        <title>JS</title>
+        <script>
+            function fUNCTIONchange (){
+                document.getElementById("p4").innerHTML="Come Again"
+            }
+        </script>
+
+    </HEAD>
+    <BODY>
+        <h1>JavaScript</h1>
+        <p id="p1"></p>
+        <script>
+            document.getElementById('p1').innerHTML="This is The First JavaScript";
+        </script>
+        <p id="p2"></p>
+        <script>
+            function MyFunction1 (a,b) {
+                return a-b; 
+                
+            }
+            document.getElementById("p2").innerHTML=MyFunction1(5,4);
+
+        </script>
+
+        <p id="p3">Hello User</p>
+        <button type="button" onclick="document.getElementById('p3').innerHTML='Bye Bye'">change text</button>
+
+        <p id="p4">Nice To Meet You</p>
+        
+        <button type="button" onclick="fUNCTIONchange()">CHANGE BY FUNCTION</button>
+
+   
+         <br><br><br>
+        
+         <img id="View IMG" src="hello.jpg" alt="View Image" width="200px">
+        <br><br><br>
+        <button type="button" onclick="TurnToTrees()">Say Good Bye</button>
+        <script>
+            function TurnThPicture() {
+               var myImg=document.getElementById("VIEW IMG").src="bye.jpg"
+               var image = document.getElementById('VIEW IMG');
+               image.height=100;
+                 image.width=100;
+            }
+        </script>
+
+    </BODY> 
+</html>
+
+
+
+
+
