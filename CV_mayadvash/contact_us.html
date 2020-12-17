@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact us</title>
+    <link rel="stylesheet" href="cv_css.css" />
+  </head>
+  <body>
+  
+    
+    </header>
+    <div class="form-container">
+     <h1>  Contact Maya Dvash</h1>
+       
+        <form onsubmit="return sendForm()" >
+          <div class="form-group">
+            <label for="ContactorName"> Company Name </label>
+            <input type="text" id="ContactorName" name="ContactorName" placeholder="Company Name" />
+          </div>
+          <div class="form-group">
+            <label for="FirstName"> First Name And Last Name </label>
+            <input type="text" id="FirstName" name="FirstName" placeholder="First Name And Last Name "/>
+          </div>
+          <div class="form-group">
+            <label for="Email">Email for Response
+            </label>
+            <input type="text" id="Email" name="Email" placeholder="Enter your email" />
+          </div>
+    
+      
+          <div class="form-group">
+            <label for="comment">&nbsp;</label>
+            <textarea id="comment" name="comment" cols="40" rows="5" placeholder="More Details"></textarea>
+          </div>
+    
+          <div class="form-group span-2" id="beforeComplete">
+            <button type="submit" value="Send form" class="default-button" > Send form</button>
+            <button class="default-button" onclick="goBack()">Back to Maya's CV</button>
+            </div>
+       <div id="afterComplete"> 
+        <div>Thank you!</div>
+        <button class="default-button" onclick="goBack()">Back to Maya's CV</button>
+       </div>
+          
+        </form>
+       
+  
+    <script src="./change_pic.js"></script>
+  </body>
+</html>
