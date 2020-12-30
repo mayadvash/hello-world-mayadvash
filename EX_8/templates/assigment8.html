@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maya'S SITE</title>
+</head>
+<body>
+
+{% include('header.html') %}
+
+    {% block guest%}
+<h2> User Name: {{ firstName | upper }} {{ lastName | default('guest', true)| lower }}</h2>
+{% if firstName %}
+
+<h1>It is so  Nice to Meet You! </h1>
+{%  else %}
+<h2>Please leave! I don't know you!!!! </h2>
+{% endif %}
+
+    {% endblock  %}
+<ol>
+{% for Movie in movies_pref %}
+<li>{{ Movie }} </li>
+{% endfor %}
+</ol>
+
+</body>
+</html>

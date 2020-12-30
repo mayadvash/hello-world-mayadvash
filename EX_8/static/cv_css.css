@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Play', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+    url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 50%;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px !important;
+
+  color: #fff;
+}
+
+.form-container {
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 40px !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+
+  border-radius: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 5px;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-areas:
+    'header header header header'
+    'about-me experience experience social-activity'
+    'skills experience experience social-activity';
+}
+
+h3 {
+  text-align: center;
+  border-top: 2px solid rgba(255, 61, 181, 0.8);
+  border-bottom: 2px solid rgba(255, 61, 181, 0.8);
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: 5px;
+
+  color: #f4f7fa;
+}
+.item1 {
+  grid-area: header;
+  text-align: center;
+  color: #fff;
+  background: radial-gradient(
+    rgba(255, 61, 181, 0.6) 10%,
+    rgba(255, 61, 181, 0.1) 80%
+  );
+}
+.item2 {
+  grid-area: about-me;
+}
+.item3 {
+  grid-area: experience;
+}
+.item4 {
+  grid-area: social-activity;
+}
+.item5 {
+  grid-area: skills;
+}
+.item6 {
+  grid-area: about-maya;
+}
+
+.content-background {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.item1 #btn-change-image {
+  display: block;
+  width: 250px;
+  margin: 10px auto;
+}
+
+/* my image css */
+#myPic {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-position: 50% 50%;
+  object-fit: cover;
+  border: 6px solid #f4f7fa;
+  text-align: center;
+
+  /* mix-blend-mode: luminosity; */
+}
+
+.default-button {
+  background-color: transparent;
+  padding: 5px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.8s;
+  outline: none;
+  border-radius: 5px;
+}
+
+.default-button:hover {
+  background-color: #fff;
+  color: #c22f8a;
+}
+
+.happy-emojy {
+  width: 30px;
+  vertical-align: middle;
+}
+.box-in {
+  animation: rotate-in 0.7s ease-in;
+}
+
+.box-out {
+  animation: rotate-out 0.7s ease-out;
+}
+
+@keyframes rotate-in {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-out {
+  0% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+/*  end image css */
+
+.button-group {
+  display: flex;
+
+  align-items: center;
+  margin: 5px 0;
+}
+
+.icon {
+  color: rgb(194, 47, 138, 0.9);
+  font-size: 30px;
+}
+
+.button-group a {
+  text-align: center;
+  flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: block;
+  padding: 3px 0;
+  margin-left: 15px;
+  border-radius: 5px;
+  color: #fff;
+  max-width: 200px;
+  transition: 0.5s;
+}
+
+.button-group a:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #c22f8a;
+}
+
+a.cv {
+  margin-left: 18px;
+}
+
+.form-container .form-group {
+  margin: 10px;
+}
+
+.form-container .form-group.span-2 {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container .form-group label {
+  display: inline-block;
+  width: 300px;
+}
+
+.form-container input[type='text'],
+.form-container textarea,
+select {
+  outline: none;
+  border: 1px solid #2c3e50;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+select {
+  width: 318px;
+}
+
+.form-container .button,
+#formDone .button {
+  color: #fff;
+  width: 250px;
+  height: 30px;
+  cursor: pointer;
+  margin-right: 119px;
+}
+#formDone .form-group {
+  margin-top: 30px;
+}
+
+#formDone {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 30px;
+}
+
+.form-container .default-button {
+  margin-bottom: 15px;
+}
+
+.form-container #afterComplete {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
